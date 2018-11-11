@@ -9,7 +9,7 @@ startups, writing software, architecting software, shipping software,
 having fun helping companies to get off the ground <s>and run into the
 ground</s>, changing jobs, hiring, occasionally managing people.
 
-That's a lot of time to look around, think about things, forms strong
+That's a lot of time to look around, think about things, form strong
 opinions, share them with people around me. Time to start writing it
 all down.
 
