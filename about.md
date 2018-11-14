@@ -14,9 +14,9 @@ opinions, share them with people around me. Time to start writing it
 all down.
 
 Beyond software, I like biking and sailing, not as sport, but as a
-powerful way to slow down, clear my head, start putting my thoughts
-together, become a better, more thoughtful person—and thus a better,
-more thoughtful engineer.
+powerful way to [slow down](http://slow.andrewz.org/), clear my head,
+start putting my thoughts together, become a better, more thoughtful
+person—and thus a better, more thoughtful engineer.
 
 I am not actively looking for a job at the moment, but I am always
 open to meeting new people and learning about cool gigs. If you are in
