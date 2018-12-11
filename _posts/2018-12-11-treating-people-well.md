@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  On Treating People Well
-date:   2018-12-12
-categories: work
+date:   2018-12-11
+categories: culture
 excerpt: "What if we would treat our
          employees as human beings first, the way we treat our friends—with
          respect, dignity, and concern about their well-being—rather than as
@@ -27,15 +27,14 @@ employees? What if (as a thought experiment) we would treat our
 employees as human beings first, the way we treat our friends—with
 respect, dignity, and concern about their well-being—rather than as
 resources a manager would deploy to achieve a specific business goal?
-My dear friend Carty wrote about something similar that he calls
-[Loving
-Organizations](https://medium.com/@cartyboston/building-a-loving-organization-f12b4310356c),
+My friend Carty wrote about something similar that he calls
+[Loving Organizations](https://medium.com/@cartyboston/building-a-loving-organization-f12b4310356c),
 but I think he is mostly treating it as a moral imperative. I’d like
 to take a slightly different tack here and explore treating people
 well from a more pragmatic standpoint. Is it a viable approach to
 building a company?  Does it make business sense?
 
-* * *
+*
 
 It is true that many companies—many start-ups—start kind of, sort of
 like that. You come to an interview, and you hear how well people are
@@ -55,12 +54,19 @@ and all that free beer? Well, maybe down the road, when it happens to
 them again and again, they will stop being surprised and will start
 seeing the free beer for what it really is.
 
+The layoffs themselves may have nothing to do with how people are
+treated: after all, if the company can’t afford to pay its employees,
+something has to give. It is how the people are treated during this
+stressful time, how they are held in the dark, how they are treated as
+mere pieces on the board: all of that really uncovers what the company
+is about.
+
 The moral of this story, which many of us saw unfolding around us, is
 not that some particular companies are evil, or turn evil, but rather
 that treating people well is hard, and it is something that is easy to
 lose under pressure.
 
-* * *
+*
 
 To me, it was a discovery of sorts. Many (all?) of us think about
 ourselves as decent people, but decency in a business setting somehow
@@ -100,7 +106,7 @@ constantly remind of their leading principles. And if it is treating
 people well above increasing the shareholders' value, then there is a
 chance of building a different company.
 
-* * *
+*
 
 What does it actually mean to treat people well? To me, it is thinking
 about your people they way you would think about your friends in a
@@ -141,7 +147,7 @@ possible, and will always prioritize their interest. Creating such
 culture is exactly what allows them to initiate difficult
 conversations with me, expecting help rather than fearing retribution.
 
-* * *
+*
 
 Being open and treating people well starts with the hiring
 process. Indeed, as we established in the previous posts, hiring done
@@ -156,12 +162,12 @@ candidate that he or she is ready to accept, I would invite them for
 one last meeting, where I would spend an hour trying to convince them
 _not_ to join my company. I would talk in depth of all problems, of
 all risks and uncertainties, of everything I personally don't like
-about my company. If they are still excited to join my after being
+about my company. If they are still excited to join us after being
 through that—well, first, my conscience is clear that I never misled
 them; and second, we have established the relationship of trust from
 the get-go.
 
-* * *
+*
 
 Sometimes, treating people well comes with a price tag. If you have to
 lay off a loyal employee, she might deserve a generous severance
@@ -178,27 +184,31 @@ company. Anyone could open it at any time, and see for themselves when
 exactly we would run out of money. It cost us nothing to do, and from
 what I heard the employees really appreciated that. I know I did.
 
-Why more companies don't do it our way? Many leaders are not
-comfortable with transparency. They feel like they have something to
-hide. They feel that people won't understand.
+Transparency is a complex subject, and there are many ways to approach
+it, ours being one of them. In the context of my argument,
+transparency is not necessarily a goal in itself, but rather the means
+to achieve a more important goal: honesty.
 
-And you know what? That's a powerful side benefit of forcing full
-transparency. If you are doing something you are not comfortable
-sharing with your people, perhaps you should stop doing that. And if
-you are doing something your people won't understand, perhaps you
-should explain it to them.
-
-* * *
+*
 
 What are the practical benefits of such people-oriented environment?
 For one, better employee satisfaction and better retention: the
-company wins. There are also benefits to you personally as a leader. I
-do fundamentally believe in karma; but if we want to stay more
-practical, let's call it reputation. If you go out of your way to
-treat people with respect, they will notice. (If you don't, rest
-assure they will notice it too!) As your reputation grows, people who
-care about being treating well will come to you, and happily work with
-you, and bring their friends.
+company wins.
+
+I talked above about picking the right leadership principles for you
+organization, for example prioritizing treating people well above
+increasing the shareholders' value. In fact, I believe that is a false
+dichotomy. We build successful organizations by attracting good people
+and creating the right environment for them to perform well. This is
+exactly what the shareholders will appreciate in the long run.
+
+There are also benefits to you personally as a leader. I do
+fundamentally believe in karma; but if we want to stay more practical,
+let's call it reputation. If you go out of your way to treat people
+with respect, they will notice. (If you don't, rest assure they will
+notice it too!) As your reputation grows, people who care about being
+treating well will come to you, and happily work with you, and bring
+their friends.
 
 It is, obviously, completely unrealistic to expect every single
 company to prioritize employees over revenue, or every single manager
@@ -223,6 +233,6 @@ about what it really means.)
 
 Wouldn't that be a great world for everyone?
 
-And how different is that world from ours?
+And is that world really so different from ours?
 
 Just keep working on your karma.
