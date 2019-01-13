@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I spent last twenty years in the great city of Boston, mostly at
+I spent the last twenty years in the great city of Boston, mostly at
 startups, writing software, architecting software, shipping software,
 having fun helping companies to get off the ground <s>and run into the
 ground</s>, changing jobs, hiring, occasionally managing people.
