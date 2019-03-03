@@ -78,7 +78,7 @@ by Andrei Alexandrescu, and briefly considering checking myself into a
 mental asylum after finishing it. Of course, it was the same Alexandrescu who wrote a
 multi-page
 [paper](http://www.drdobbs.com/generic-min-and-max-redivivus/184403774)
-exploring different implementation options for `max(a, b)` in
+exploring different implementation options for `max(a, b)` in
 templated C++ and coming to the conclusion that no satisfactory
 solution exists (or, at least, didn’t exist in the C++ of the 2001
 vintage).
@@ -251,8 +251,8 @@ def foo(...):
 
 This is quite similar to aspect-oriented programming in Java, only so
 much simpler. There is no magic involved; after all, decorators don’t
-give you any special power, they are just a syntactic sugar for
-`func=decorator(func)`.
+give you any special power; they are just a syntactic sugar for
+`func = decorator(func)`.
 
 If they are just some syntactic sugar, why do we even need them? Here
 is an important part: because they are concise, and make the
@@ -288,7 +288,7 @@ that you have a strongly, statically-typed language.
 Fast-forward 19 years: Java is no longer young not simple, and it got
 templates all right (called “generics”).
 
-Now, while re-learning Java by programming it it, I was quite
+Now, while re-learning Java by programming in it, I was quite
 surprised to see code like this:
 
 ```java
