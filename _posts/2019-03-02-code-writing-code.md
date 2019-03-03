@@ -15,11 +15,13 @@ excerpt: "Long time ago, in the midst of spending a few happy years writing C++
 
 ![](https://www.telegraph.co.uk/content/dam/Travel/2018/July/gili-GettyImages-873507622.jpg)
 
+<!-- Photo credit: Getty -->
+
 _Until recently, the first and last time I used Java was in the
 year 2000. Back then, it was a relatively young language, simple and
-inefficient, looking (whatever its authors had to say on the subject)
-as some seriously bastardized C++. I shrugged and moved away from
-Java._
+inefficient, looking as some seriously bastardized C++ (regardless of
+what its authors had to say on the subject). I shrugged and moved away
+from Java._
 
 _Fast forward to 2019: I am writing in Java again, and of course it
 has a different feel to it now, neither simple nor slow
@@ -30,11 +32,11 @@ first, some history._
 
 ## Doing It By Hand
 
-Long time ago, in the midst of spending a few happy years writing C++
+A long time ago, in the midst of spending a few happy years writing C++
 code, I happened to work on a project in plain C. It felt awkward
 after C++, but ended up being somewhat tolerable, until I needed a
 couple of hash tables for objects of different types. In my mind, it
-was a simple, innocent thing to ask, but this is where my foray back
+was a simple, innocent request, but this is where my foray back
 to the C land hit a brick wall.
 
 Dismayed that there was no standard solution to this simple problem,
@@ -50,16 +52,16 @@ power of Perl was far greater than any other solution available.
 
 Since then, I became a big proponent of code writing code.
 Essentially, you construct a higher-level language for
-yourself. Higher language always means greater expressive power and
+yourself. A higher language always means greater expressive power and
 programmer productivity.
 
-Speaking for a second of other solutions available. Of course, C does
-have a built-in solution for code generation I was “supposed” to use:
-the preprocessor. Alas, the C preprocessor is a sad joke (beyond a few
-simple tasks like conditional compilation); it’s not even
-Turing-complete. Which is kind of sad, historically speaking, since
-there were industrial languages before C with vastly superior
-preprocessing capabilities. For example,
+Let's talk, for a second, about other options available to me back
+then. Of course, C does have a built-in solution for code generation I
+was “supposed” to use: the preprocessor. Alas, the C preprocessor is a
+sad joke (beyond a few simple tasks like conditional compilation);
+it’s not even Turing-complete. Which is kind of sad, historically
+speaking, since there were industrial languages before C with vastly
+superior preprocessing capabilities. For example,
 [PL/I](http://web.eah-jena.de/~kleine/history/languages/IBM-PLI-F-LangRefMan.pdf)
 (developed by IBM in the 1960s) had a full-featured preprocessor with
 typed variables, loops and subroutines, not to mention the syntax
@@ -80,8 +82,7 @@ multi-page
 [paper](http://www.drdobbs.com/generic-min-and-max-redivivus/184403774)
 exploring different implementation options for `max(a, b)` in
 templated C++ and coming to the conclusion that no satisfactory
-solution exists (or, at least, didn’t exist in the C++ of the 2001
-vintage).
+solution exists (or, at least, didn’t exist in 2001 vintage C++).
 
 ## All That Is Gold Doesn’t Glitter
 
@@ -98,7 +99,7 @@ One of the areas where Lisp was far ahead of its time was its
 unmatched preprocessing capability (not explicitly existing in
 [the original version of Lisp](http://www-formal.stanford.edu/jmc/recursive.html),
 but introduced soon thereafter, in the early 1960s). In Lisp’s macro
-system, preprocessor is not just a subset of the source language, as
+system, the preprocessor is not just a subset of the source language, as
 in PL/I; it _is_ the source language, just applied to the source code
 at compile time. Here is a very short example of a unit test framework
 definition in Common Lisp (from _Practical Common Lisp_ by Peter Seibel):
@@ -117,7 +118,6 @@ Given that, you can now start testing something, like arithmetic expressions:
     > (check
           (= 3 (+ 1 2))
           (= 5 (* 2 2)))
-
 
     pass ... (= 3 (+ 1 2))
     FAIL ... (= 5 (* 2 2))
@@ -222,9 +222,9 @@ dynamically, at run time.
 
 In fact, that’s the _only_ way they are created (in the case of our
 `Point`, in the constructor); there are no capabilities in Python to
-pre-define instance attribute. In this example, we solve this problem
-by explicitly telling the decorator which attributes should get
-getters and setter defined; not unreasonable choice, since it gives
+pre-define instance attributes. In this example, we solve this problem
+by explicitly telling the decorator for which attributes to define
+getters and setters; not an unreasonable choice, since it gives
 full control to the programmer while still keeping the code short and
 clean.
 
@@ -274,7 +274,7 @@ regular functions.)
 ## Beautiful Hacky Island
 
 And now we come to my latest foray into Java. Last time I used it was
-long, long time ago: in the year 2000. Back then it was a young and
+a long, long time ago: in the year 2000. Back then it was a young and
 simple language, essentially C++ stripped of its perceived
 complexities, including its meager metaprogramming tools:
 preprocessing and templates (not unlike Go in our days). Data in its
@@ -348,14 +348,14 @@ _Project Lombok_.
 Lombok is a beautiful Indonesian island not far from the island of
 Java (see the title image). Project Lombok defines a bunch of
 annotations that generate so-called boilerplate code: getters,
-setters, constructors, `equals` and `hashCode`—this kind of
+setters, constructors, `equals()` and `hashCode()`—this kind of
 stuff. They do it by taking the next step in the annotation processor:
 after getting access to the program’s AST, they use undocumented,
 internal Sun compiler API to directly modify AST. Fortunately, most
 everyone happens to use Sun’s (now Oracle’s) `javac`, and the entire
 thing happens to work quite well in practice.
 
-Java community appears to be split on Project Lombok. Some rightfully
+The Java community appears to be split on Project Lombok. Some rightfully
 consider it to be one giant hack: a cardinal sin for the language and
 the community obsessed with defining interfaces, separating access,
 and hiding private methods. Others applaud it as a great hack making
@@ -417,7 +417,7 @@ boilerplate.
 
 And here, on this unsatisfactory note, I have to end my story. Yes,
 Java has come a long way, but in terms of code writing code it not
-just haven’t caught up with Lisp _fifty years ago:_ it is still light
+just haven’t caught up with the Lisp of _fifty years ago:_ it is still light
 years behind. For me, I’ll hold my enthusiasm for some younger and
 bolder languages, like Rust, that appears to have a well-developed
 [macro capability](https://doc.rust-lang.org/book/ch19-06-macros.html).
