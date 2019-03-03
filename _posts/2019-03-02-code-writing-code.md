@@ -240,8 +240,8 @@ to time them:
 def timeit(func):
     def wrapped(*args, **kwargs):
         start = time.time()
-        func(args, kwargs)
-        print("%s took %f s." % (func.__name__, time.time() - start);
+        func(*args, **kwargs)
+        print("%s took %f s." % (func.__name__, time.time() - start))
     return wrapped
 
 @timeit
@@ -363,7 +363,7 @@ source code shorter, cleaner and more declarative: in essence,
 improving the source language.
 
 Though this obviously is not the only application of code writing
-code, to me it's been a Holy Grail of all the techniques we reviewed
+code, to me it’s been a Holy Grail of all the techniques we reviewed
 so far: extend the language to make it more powerful, easier to use,
 more adopted to the problem domain.
 
@@ -374,9 +374,9 @@ excited by it.
 
 However, there a huge “but”, of course, even a few. Even though
 Project Lombok is _implemented_ in Java, the actual language of
-defining and specifying annotations is rather poor. Lombok's
+defining and specifying annotations is rather poor. Lombok’s
 annotation implementations live in a completely separate project, very
-far from the source code being modified. And boy, aren't they complex!
+far from the source code being modified. And boy, aren’t they complex!
 Just take a quick look at this
 [blog post](http://notatube.blogspot.com/2010/12/project-lombok-creating-custom.html)
 describing how to add a `@HelloWorld` annotation to Lombok. Count how
@@ -417,8 +417,8 @@ boilerplate.
 
 And here, on this unsatisfactory note, I have to end my story. Yes,
 Java has come a long way, but in terms of code writing code it not
-just haven't caught up with Lisp _fifty years ago:_ it is still light
-years behind. For me, I'll hold my enthusiasm for some younger and
+just haven’t caught up with Lisp _fifty years ago:_ it is still light
+years behind. For me, I’ll hold my enthusiasm for some younger and
 bolder languages, like Rust, that appears to have a well-developed
 [macro capability](https://doc.rust-lang.org/book/ch19-06-macros.html).
 
