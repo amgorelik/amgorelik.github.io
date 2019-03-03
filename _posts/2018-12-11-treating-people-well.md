@@ -14,25 +14,25 @@ the US healthcare. Their office was in a historic building overlooking
 the river with beautiful views, so I really didn't want to leave... but
 I digress.
 
-While I was there, an interviewer after an interviewer kept repeating
-their mantra of “treating their customers (that is, patients) as if
-they were their family”. What I think they meant by that was not to
-invite the customers for a Thanksgiving dinner, but rather to make
-treating them well and with dignity a guiding principle for all
-business and technical decisions the company makes—above, say,
-maximizing the profits and the market share.
+While I was there, interviewer after interviewer kept repeating their
+mantra of “treating their customers (that is, patients) as if they
+were their family”. What I think they meant by that was not to invite
+the customers for a Thanksgiving dinner, but rather to make treating
+them well and with dignity a guiding principle for all business and
+technical decisions the company makes—above, say, maximizing the
+profits and the market share.
 
 What if we, running a company, apply a similar approach to our
 employees? What if (as a thought experiment) we would treat our
 employees as human beings first, the way we treat our friends—with
 respect, dignity, and concern about their well-being—rather than as
 resources a manager would deploy to achieve a specific business goal?
-My friend Carty wrote about something similar that he calls
-[Loving Organizations](https://medium.com/@cartyboston/building-a-loving-organization-f12b4310356c),
+My friend Carty wrote about something similar that he calls [Loving
+Organizations](https://medium.com/@cartyboston/building-a-loving-organization-f12b4310356c),
 but I think he is mostly treating it as a moral imperative. I’d like
 to take a slightly different tack here and explore treating people
 well from a more pragmatic standpoint. Is it a viable approach to
-building a company?  Does it make business sense?
+building a company? Does it make business sense?
 
 *
 
@@ -143,7 +143,7 @@ And if there is nothing I can do to stop them leaving, I will happily
 use my own network to help them find a new, better fitting job for
 themselves—the way my own bosses had done for me in the past. I want
 my employees to know that I will always help them to the extent
-possible, and will always prioritize their interest. Creating such
+possible, and will always prioritize their interests. Creating such a
 culture is exactly what allows them to initiate difficult
 conversations with me, expecting help rather than fearing retribution.
 
@@ -153,8 +153,8 @@ Being open and treating people well starts with the hiring
 process. Indeed, as we established in the previous posts, hiring done
 right is the chance for both parties to get to know each other and to
 evaluate the mutual fit. To that end, I would always do my best to be
-brutally honest with a candidate, not to become carried away by the
-“hiring is selling” paradigm.
+brutally honest with a candidate, and not to become carried away by
+the “hiring is selling” paradigm.
 
 In fact, I came up with something I call a negativity session. When I
 am ready to make an offer, and I verbally established with the
@@ -205,24 +205,24 @@ exactly what the shareholders will appreciate in the long run.
 There are also benefits to you personally as a leader. I do
 fundamentally believe in karma; but if we want to stay more practical,
 let's call it reputation. If you go out of your way to treat people
-with respect, they will notice. (If you don't, rest assure they will
+with respect, they will notice. (If you don't, rest assured they will
 notice it too!) As your reputation grows, people who care about being
 treating well will come to you, and happily work with you, and bring
 their friends.
 
-It is, obviously, completely unrealistic to expect every single
-company to prioritize employees over revenue, or every single manager
-to care deeply about his or her karma. Some companies are just
-genuinely not interested in a human aspect of the business. Some lose
-their commitment somewhere along the way. In particular, as a company
-grows and has to scale hiring and make the org chart more complex,
-there is often pressure for more formal, more transactional processes,
-where employees deliver certain value for the company, get compensated
-for that value, and there is nothing else to the employee/employer
+It is obviously completely unrealistic to expect every single company
+to prioritize employees over revenue, or every single manager to care
+deeply about his or her karma. Some companies are just genuinely not
+interested in the human aspect of the business. Some lose their
+commitment somewhere along the way. In particular, as a company grows
+and has to scale hiring and make the org chart more complex, there is
+often pressure for more formal, more transactional processes, where
+employees deliver certain value for the company, get compensated for
+that value, and there is nothing else to the employee/employer
 interaction.
 
-Imagine then a world where these two trends run long enough to reach a
-stable state. In this world, people who want to be treated with
+Imagine, then, a world where these two trends run long enough to reach
+a stable state. In this world, people who want to be treated with
 respect and compassion would go work for companies that prioritize
 treating employees well—based on the reputation of the companies and
 their leaders. And people who prefer a more transactional style would
