@@ -341,9 +341,9 @@ There is, however, a way to write your own annotation processor (a
 class implementing
 [`javax.annotation.processing.Processor`](https://docs.oracle.com/javase/10/docs/api/javax/annotation/processing/Processor.html)—or,
 usually, extending `AbstractProcessor`) and hook it up into a
-compiler. You just place a jar file with special processor description
-in your build path, and the compiler automatically pick it up an calls
-your annotation processor as needed.
+compiler. You just place a jar file with a special processor
+description in your build path, and the compiler automatically picks
+it up an calls your annotation processor as needed.
 
 This is where things get exciting. First of all, the Java compiler is
 actually running a JVM and executing Java code during the compilation
@@ -359,9 +359,9 @@ read-only. You can’t _change_ the code being compiled, just generate
 more.
 
 If an annotation processor cannot change the currently compiled class,
-then how that `@Getter`/`@Setter` business can possibly work? You want
-find an answer in the Java language documentation, yet this is exactly
-what _Project Lombok_ does.
+then how that `@Getter`/`@Setter` business can possibly work? You will
+not find an answer in the Java language documentation, yet this is
+exactly what _Project Lombok_ does.
 
 Lombok is a beautiful Indonesian island not far from the island of
 Java (see the title image). Project Lombok defines a bunch of
@@ -425,19 +425,19 @@ some languages—and language cultures—clearly produce much more of that
 than the others. The language that produced Project Lombok is probably
 one of the worst offenders. Some of it is cultural, and some is the
 lack of language power. For example, coming back to the getter and
-setter functions: I mentioned that they are not used in Pythonic code,
-and the reason is that the language has the concept of _properties_,
-which allow to define getters and setters completely transparently,
-and only when they do something nontrivial—that is, when they are not
-boilerplate.
+setter functions: I mentioned that they are not used in a properly
+Pythonic code, and the reason is that the language i more powerful. It
+has the concept of _properties_, which allow to define getters and
+setters completely transparently, and only when they do something
+nontrivial: that is, when they are not boilerplate.
 
 ## * * *
 
 And here, on this unsatisfactory note, I have to end my story. Yes,
 Java has come a long way, but in terms of code writing code it not
-just haven’t caught up with the Lisp of _fifty years ago:_ it is still light
-years behind. For me, I’ll hold my enthusiasm for some younger and
-bolder languages, like Rust, that appears to have a well-developed
+just haven’t caught up with the Lisp of _fifty years ago:_ it is still
+light years behind. For me, I’ll hold my enthusiasm for some younger
+and bolder languages, like Rust, that appears to have a well-developed
 [macro capability](https://doc.rust-lang.org/book/ch19-06-macros.html).
 
 What are your favorite examples of metaprogramming? Let me know! And
