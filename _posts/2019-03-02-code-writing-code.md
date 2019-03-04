@@ -341,9 +341,9 @@ There is, however, a way to write your own annotation processor (a
 class implementing
 [`javax.annotation.processing.Processor`](https://docs.oracle.com/javase/10/docs/api/javax/annotation/processing/Processor.html)—or,
 usually, extending `AbstractProcessor`) and hook it up into a
-compiler. You just place a jar file with special processor description
-in your build path, and the compiler automatically pick it up an calls
-your annotation processor as needed.
+compiler. You just place a jar file with a special processor
+description in your build path, and the compiler automatically picks
+it up an calls your annotation processor as needed.
 
 This is where things get exciting. First of all, the Java compiler is
 actually running a JVM and executing Java code during the compilation
@@ -359,9 +359,9 @@ read-only. You can’t _change_ the code being compiled, just generate
 more.
 
 If an annotation processor cannot change the currently compiled class,
-then how that `@Getter`/`@Setter` business can possibly work? You want
-find an answer in the Java language documentation, yet this is exactly
-what _Project Lombok_ does.
+then how that `@Getter`/`@Setter` business can possibly work? You will
+not find an answer in the Java language documentation, yet this is
+exactly what _Project Lombok_ does.
 
 Lombok is a beautiful Indonesian island not far from the island of
 Java (see the title image). Project Lombok defines a bunch of
