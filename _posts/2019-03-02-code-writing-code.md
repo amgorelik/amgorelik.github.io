@@ -27,7 +27,7 @@ _Fast forward to 2019: I am writing in Java again, and of course it
 has a different feel to it now, neither simple nor slow
 anymore. Somehow, I got especially fascinated by its metaprogramming
 capabilities, or the lack thereof. Here is a story of what I found—but
-first, some history._
+first, some personal history._
 
 
 ## Doing It By Hand
@@ -59,17 +59,22 @@ Let's talk, for a second, about other options available to me back
 then. Of course, C does have a built-in solution for code generation I
 was “supposed” to use: the preprocessor. Alas, the C preprocessor is a
 sad joke (beyond a few simple tasks like conditional compilation);
-it’s not even Turing-complete. Which is kind of sad, historically
-speaking, since there were industrial languages before C with vastly
-superior preprocessing capabilities. For example,
-[PL/I](http://web.eah-jena.de/~kleine/history/languages/IBM-PLI-F-LangRefMan.pdf)
-(developed by IBM in the 1960s) had a full-featured preprocessor with
-typed variables, loops and subroutines, not to mention the syntax
-being a subset of the PL/I language itself.
+it’s not even Turing-complete. Which is kind of disappointing,
+historically speaking, since there were industrial languages before C
+with vastly superior preprocessing capabilities.
 
-With the rise of minicomputers and PCs all that somehow got forgotten;
-one can easily argue that even in 2019 the modern mainstream languages
-still haven’t caught up with the 1960s state of the art.
+Take, for example,
+[PL/I](http://web.eah-jena.de/~kleine/history/languages/IBM-PLI-F-LangRefMan.pdf),
+developed by IBM in the 1960s. I remember very well learning how to
+program it in school. It had a full-featured preprocessor with typed
+variables, loops and subroutines, not to mention the syntax being a
+subset of the PL/I language itself.
+
+With the rise of minicomputers and PCs all that somehow got
+forgotten. The history of computing made one of its many resets of
+complex to simple. One can easily argue that even in 2019 the modern
+mainstream languages still haven’t caught up with the 1960s state of
+the art.
 
 If I were writing in C++ instead of C, I of course would have easily
 solved my hash table problem with templates. However, C++ templates
@@ -91,7 +96,7 @@ doing enterprise software development in Lisp—an endangered species,
 indeed!
 
 My time there was an eye-opener. Lisp, the second oldest high-level
-programming language (1958; Fortran was released in 1957), for decades
+programming language (1958; FORTRAN was released in 1957), for decades
 was ahead of much more recent languages, that only recently caught up
 with it—mostly.
 
@@ -277,10 +282,13 @@ And now we come to my latest foray into Java. Last time I used it was
 a long, long time ago: in the year 2000. Back then it was a young and
 simple language, essentially C++ stripped of its perceived
 complexities, including its meager metaprogramming tools:
-preprocessing and templates (not unlike Go in our days). Data in its
-data structures turned into ~~a pumpkin~~ `Object` references, and
-there was no other way around it, short of falling back to generating
-code with hand-written Perl scripts.
+preprocessing and templates. That was yet historical reset from
+complex to simple, not unlike Go in our days.
+
+Sop, speaking about simple: data in Java data structures turned into
+~~a pumpkin~~ `Object` references, and there was absolutely no way
+around it, short of falling back to generating code with hand-written
+Perl scripts.
 
 I call this _ostrich typing:_ bury your head in the sand and pretend
 that you have a strongly, statically-typed language.
@@ -331,19 +339,29 @@ directly, with no need for special syntax:
 
 There is, however, a way to write your own annotation processor (a
 class implementing
-[`javax.annotation.processing.Processor`](https://docs.oracle.com/javase/10/docs/api/javax/annotation/processing/Processor.html))
-and hook it up into a compiler. Here things get exciting. First of
-all, the Java compiler is actually running a JVM and executing Java
-code during the compilation process. Second, your annotation processor
-has access to AST (abstract syntax tree, the parsed representation of
-the source code being compiled) and can _generate_ more source code,
-which would also be compiled during the same compilation
-process. Unfortunately, you can’t _change_ the code being compiled,
-just generate more.
+[`javax.annotation.processing.Processor`](https://docs.oracle.com/javase/10/docs/api/javax/annotation/processing/Processor.html)—or,
+usually, extending `AbstractProcessor`) and hook it up into a
+compiler. You just place a jar file with special processor description
+in your build path, and the compiler automatically pick it up an calls
+your annotation processor as needed.
+
+This is where things get exciting. First of all, the Java compiler is
+actually running a JVM and executing Java code during the compilation
+process. Second, your annotation processor has access to AST (abstract
+syntax tree, the parsed representation of the source code being
+compiled) and can _generate_ more source code, which would also be
+compiled during the same compilation process. This definitely
+introduces a completely new, powerful capability into the language,
+unlike anything it had before.
+
+Unfortunately, the access to AST within an annotation processor is
+read-only. You can’t _change_ the code being compiled, just generate
+more.
 
 If an annotation processor cannot change the currently compiled class,
-then how that `@Getter`/`@Setter` business can possibly work? Enter
-_Project Lombok_.
+then how that `@Getter`/`@Setter` business can possibly work? You want
+find an answer in the Java language documentation, yet this is exactly
+what _Project Lombok_ does.
 
 Lombok is a beautiful Indonesian island not far from the island of
 Java (see the title image). Project Lombok defines a bunch of
@@ -355,12 +373,12 @@ internal Sun compiler API to directly modify AST. Fortunately, most
 everyone happens to use Sun’s (now Oracle’s) `javac`, and the entire
 thing happens to work quite well in practice.
 
-The Java community appears to be split on Project Lombok. Some rightfully
-consider it to be one giant hack: a cardinal sin for the language and
-the community obsessed with defining interfaces, separating access,
-and hiding private methods. Others applaud it as a great hack making
-source code shorter, cleaner and more declarative: in essence,
-improving the source language.
+The Java community appears to be split on Project Lombok. Some
+rightfully consider it to be one giant hack: a cardinal sin for the
+language and the community obsessed with defining interfaces,
+separating access, and hiding private methods. Others applaud it as a
+great hack making source code shorter, cleaner, more declarative, more
+maintainable: in essence, improving the source language.
 
 Though this obviously is not the only application of code writing
 code, to me it’s been a Holy Grail of all the techniques we reviewed
