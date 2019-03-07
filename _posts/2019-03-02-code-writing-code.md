@@ -3,12 +3,12 @@ layout: post
 title:  Code Writing Code
 date:   2019-03-02
 categories: programming
-excerpt: "Long time ago, in the midst of spending a few happy years writing C++
-    code, I had a project in plain C. It felt awkward after C++, but ended
-    up being somewhat tolerable, until I needed a couple of hash tables for
-    objects of different types. In my mind, it was a simple, innocent
-    thing to ask, but this is where my foray back to the C land hit a brick
-    wall."
+excerpt: "A long time ago, in the midst of spending a few happy years writing C++
+code, I happened to work on a project in plain C. It felt awkward
+after C++, but ended up being somewhat tolerable, until I needed a
+couple of hash tables for objects of different types. In my mind, it
+was a simple, innocent request, but this is where my foray back
+to the C land hit a brick wall."
 ---
 
 <!--![](https://upload.wikimedia.org/wikipedia/commons/2/29/Gunung_Rinjani_from_Gili_Air_1.jpg)-->
