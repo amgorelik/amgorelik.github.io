@@ -436,7 +436,7 @@ for all non-final fields, and appropriate `toString`, `equals` and
 constructor that initializes all final fields”. This pretty mechanical
 code that you are somehow _supposed_ to write yourself (if not for
 Project Lombok), tens of lines of it even for a trivial class like
-this, not only would completely obscureq the meaningful parts of
+this, not only would completely obscure the meaningful parts of
 `Point` and make it next to impossible to read. It is also a few more
 functions to test. And if you don’t test them, because they are boring
 and trivial,—well, then don’t be surprised when you decide to make
