@@ -162,9 +162,10 @@ The ease and the natural way of defining macros in Lisp have a very
 interesting practical effect. Whereas writing macros in C is
 (rightfully) frown upon, the Lisp programmer has no such
 inhibitions. From what I could see, real-world Lisp programmers would
-literally write macros every day; for any bit of functionality you
-just make a decision whether it is better executed at run time (then
-it’s a function) or at compile time (then its a macro).
+write macros literally every day; for every bit of functionality you
+need to implement, you just make a decision whether it is better
+executed at run time (then it’s a function) or at compile time (then
+it’s a macro).
 
 ## Dynamic All The Way
 
@@ -337,22 +338,42 @@ directly, with no need for special syntax:
 
     foo.test = True
 
-There is, however, a way to write your own annotation processor (a
-class implementing
+Interestingly, one motivation for the unusual annotation syntax was
+the need to maintain backwards compatibility—in particular, not to
+introduce any new reserved keywords. (At this point, I can’t resist
+the temptation to mention the good old PL/I again. Somehow it managed
+to have no reserved keywords: you could name your variables “if” and
+“do” to your heart’s content, and the compiler was competent enough to
+tell apart statements from identifiers based on the grammar. How come
+we can’t do it anymore fifty years later?)
+
+In any case, the language designers’ plan seems to have worked well
+enough. Different Java frameworks are using annotations to enrich the
+language, essentially defining a higher language on top of Java. One
+good example is the Spring framework, essentially
+[built around annotations](https://zeroturnaround.com/rebellabs/spring-framework-annotations-cheat-sheet/).
+They seem to be so pervasive that are naturally causing some
+[thoughtful backlash](https://blog.softwaremill.com/the-case-against-annotations-4b2fb170ed67).
+Anyhow, Spring annotations, like many others, seem to be based on the
+same run-time reflection behavior we just discussed for JUnit.
+
+There is, however, a way to handle annotations at compile time. You
+can write your own annotation processor (a class implementing
 [`javax.annotation.processing.Processor`](https://docs.oracle.com/javase/10/docs/api/javax/annotation/processing/Processor.html)—or,
 usually, extending `AbstractProcessor`) and hook it up into a
-compiler. You just place a jar file with a special processor
-description in your build path, and the compiler automatically picks
-it up an calls your annotation processor as needed.
+compiler. You just place a jar file with
+[a special processor description](http://hannesdorfmann.com/annotation-processing/annotationprocessing101)
+in your build path, and the compiler automatically picks it up an
+calls your annotation processor as needed.
 
 This is where things get exciting. First of all, the Java compiler is
 actually running a JVM and executing Java code during the compilation
-process. Second, your annotation processor has access to AST (abstract
-syntax tree, the parsed representation of the source code being
-compiled) and can _generate_ more source code, which would also be
-compiled during the same compilation process. This definitely
-introduces a completely new, powerful capability into the language,
-unlike anything it had before.
+process, and runs your code at compile time! Second, your annotation
+processor has access to AST (abstract syntax tree, the parsed
+representation of the source code being compiled) and can _generate_
+more source code, which would also be compiled during the same
+compilation process. This definitely introduces a completely new,
+powerful capability into the language, unlike anything it had before.
 
 Unfortunately, the access to AST within an annotation processor is
 read-only. You can’t _change_ the code being compiled, just generate
@@ -390,12 +411,53 @@ code writing code, moreover, Java writing Java: using the same
 language for metaprogramming rightfully feels powerful. I am still
 excited by it.
 
-However, there a huge “but”, of course, even a few. Even though
+Unlike most other annotations uses, that seem to be within the context
+of this or that framework, Lombok is not a framework. Its annotations
+do not add new functionality to the annotated code; they just make it
+more concise and maintainable.
+
+For example, consider `@Data`, one of the most powerful annotations in
+Project Lombok.
+
+```java
+@Data
+class Point {
+    int x;
+    int y;
+}
+```
+
+As its documentation
+[states](https://projectlombok.org/features/Data), “`@Data` generates
+all the boilerplate that is normally associated with simple POJOs
+(Plain Old Java Objects) and beans: getters for all fields, setters
+for all non-final fields, and appropriate `toString`, `equals` and
+`hashCode` implementations that involve the fields of the class, and a
+constructor that initializes all final fields”. This pretty mechanical
+code that you are somehow _supposed_ to write yourself (if not for
+Project Lombok), tens of lines of it even for a trivial class like
+this, not only would completely obscureq the meaningful parts of
+`Point` and make it next to impossible to read. It is also a few more
+functions to test. And if you don’t test them, because they are boring
+and trivial,—well, then don’t be surprised when you decide to make
+your Point three-dimensional and add a `z` coordinate that you forget
+to update `hashCode()` and get some weird behavior of your Points in a
+HashMap.
+
+Every time you have to write lines of code irrelevant to the task at
+hand, it is a sign of a low-level language. By saving you from having
+to write it, Project Lombok elevates Java, makes it higher-level and
+better language.
+
+However, there a huge “but”, of course,—even a few. Even though
 Project Lombok is _implemented_ in Java, the actual language of
-defining and specifying annotations is rather poor. Lombok’s
-annotation implementations live in a completely separate project, very
-far from the source code being modified. And boy, aren’t they complex!
-Just take a quick look at this
+defining and specifying annotations is rather weak, with poor type
+system no loops and conditionals, and no ability for different
+annotations to inter-operate. 
+
+Lombok’s annotation implementations live in a completely separate
+project, very far from the source code being modified. And boy, aren’t
+they complex!  Just take a quick look at this
 [blog post](http://notatube.blogspot.com/2010/12/project-lombok-creating-custom.html)
 describing how to add a `@HelloWorld` annotation to Lombok. Count how
 many screens takes something that would only require a few lines in
@@ -404,7 +466,10 @@ Lisp or Python.
 The complexity is partially driven by the hackish nature of the
 project, but partially it is also the nature of the beast: compiler
 plugins are hard, and Java syntax and its AST are not trivial,
-either. Either way, the takeaway is the same: even though Lombok’s
+either. Not to mention the need for Project Lombok to inter-operate
+with IDE (somehow, Java programming is unthinkable without an IDE these days).
+
+Either way, the takeaway is the same: even though Lombok’s
 annotations are super-useful (I firmly belong to that camp), their
 implementation is not for the faint of heart. Developers are unlikely
 to casually add them on the day to day basis the way they do in Lisp,
@@ -416,20 +481,20 @@ languages. Just as the Python decorator syntax was influenced by Java,
 Lombok’s annotations seem to be influenced by Python decorators. And
 now, Python 3.7 (the latest version of Python)
 [introduced](https://www.python.org/dev/peps/pep-0557/) a standard
-`@dataclass` decoration, very similar to Project Lombok’s
-[`@Data`](https://projectlombok.org/features/Data) annotation.
+`@dataclass` decoration, very similar to Project Lombok’s `@Data`
+annotation we have just discussed.
 
-This last fact underscores the broad cross-language appeal of using
-code writing code to get read of mundane, “boilerplate” code. However
-some languages—and language cultures—clearly produce much more of that
-than the others. The language that produced Project Lombok is probably
-one of the worst offenders. Some of it is cultural, and some is the
-lack of language power. For example, coming back to the getter and
+This proves once again the broad cross-language appeal of using code
+writing code to get read of mundane, “boilerplate” code. However some
+languages—and language cultures—clearly produce much more of that than
+the others. The language that produced Project Lombok is probably one
+of the worst offenders. Some of it is cultural, and some is caused by
+the lack of language power. For example, coming back to the getter and
 setter functions: I mentioned that they are not used in a properly
 Pythonic code, and the reason is that the language i more powerful. It
 has the concept of _properties_, which allow to define getters and
 setters completely transparently, and only when they do something
-nontrivial: that is, when they are not boilerplate.
+nontrivial: that is, _when they are not boilerplate._
 
 ## * * *
 
