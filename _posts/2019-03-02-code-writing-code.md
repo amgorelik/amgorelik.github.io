@@ -283,7 +283,7 @@ And now we come to my latest foray into Java. Last time I used it was
 a long, long time ago: in the year 2000. Back then it was a young and
 simple language, essentially C++ stripped of its perceived
 complexities, including its meager metaprogramming tools:
-preprocessing and templates. That was yet historical reset from
+preprocessing and templates. That was yet another historical reset from
 complex to simple, not unlike Go in our days.
 
 Sop, speaking about simple: data in Java data structures turned into
@@ -294,7 +294,7 @@ Perl scripts.
 I call this _ostrich typing:_ bury your head in the sand and pretend
 that you have a strongly, statically-typed language.
 
-Fast-forward 19 years: Java is no longer young not simple, and it got
+Fast-forward 19 years: Java is no longer young nor simple, and it got
 templates all right (called “generics”).
 
 Now, while re-learning Java by programming in it, I was quite
